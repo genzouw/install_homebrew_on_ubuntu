@@ -1,5 +1,10 @@
 # linuxbrew setup script
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/genzouw/linuxbrew_setup_script.svg?style=for-the-badge)](https://hub.docker.com/r/genzouw/linuxbrew_setup_script/)
+[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/genzouw/linuxbrew_setup_script.svg?style=for-the-badge)](https://hub.docker.com/r/genzouw/linuxbrew_setup_script/)
+
+[![dockeri.co](https://dockeri.co/image/genzouw/linuxbrew_setup_script)](https://hub.docker.com/r/genzouw/linuxbrew_setup_script)
+
 ## Description
 
 This repository have linuxbrew setup script ( `setup.sh` ) and test environment ( `Dockerfile` / `docker-compose.yml` )
