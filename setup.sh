@@ -27,8 +27,8 @@ which brew >/dev/null 2>&1 \
 
     . ~/.profile
     brew install gcc
-    echo 'export LDFLAGS="-L$HOME/.linuxbrew/opt/isl@0.18/lib' >> ~/.profile
-    echo 'export CPPFLAGS="-I$HOME/.linuxbrew/opt/isl@0.18/include' >> ~/.profile
+    echo 'export LDFLAGS="-L$HOME/.linuxbrew/opt/isl@0.18/lib"' >> ~/.profile
+    echo 'export CPPFLAGS="-I$HOME/.linuxbrew/opt/isl@0.18/include"' >> ~/.profile
   }
 
 cat <<EOF
