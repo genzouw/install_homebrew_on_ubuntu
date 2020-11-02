@@ -2,22 +2,13 @@ FROM ubuntu:latest
 
 LABEL maintainer "genzouw <genzouw@gmail.com>"
 
-RUN apt-get update \
-  && apt-get upgrade -y \
-  && apt-get -y install \
-    --no-install-recommends \
-    locales \
-    sudo \
-  && apt-get clean \
-  && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
+COPY dockerfile-init.sh /tmp/
 
-ENV NAME=brew
-ENV PASSWORD=brew
+ENV USER=brew
 ENV UID=1000
 
-RUN useradd --uid $UID --shell /bin/bash --create-home $NAME
-RUN groupadd admin
-RUN gpasswd -a $NAME admin
-RUN echo "$NAME:$PASSWORD" | chpasswd
+RUN /tmp/dockerfile-init.sh "${UID}" && rm /tmp/dockerfile-init.sh
 
-CMD [ "su", "-", "brew" ]
+USER ${UID}
+
+ENTRYPOINT ["bash"]

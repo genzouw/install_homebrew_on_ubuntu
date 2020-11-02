@@ -6,3 +6,4 @@ services:
     volumes:
       - $PWD:/workdir
     working_dir: /workdir
+    tty: true
