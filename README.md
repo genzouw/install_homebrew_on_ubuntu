@@ -1,4 +1,4 @@
-# linuxbrew setup script
+# Homebrew install script on Ubuntu
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/genzouw/linuxbrew_setup_script.svg?style=for-the-badge)](https://hub.docker.com/r/genzouw/linuxbrew_setup_script/)
 [![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/genzouw/linuxbrew_setup_script.svg?style=for-the-badge)](https://hub.docker.com/r/genzouw/linuxbrew_setup_script/)
@@ -7,47 +7,35 @@
 
 ## Description
 
-This repository have linuxbrew setup script ( `setup.sh` ) and test environment ( `Dockerfile` / `docker-compose.yml` )
+This repository have Homebrew install script on Ubuntu ( `install_homebrew_on_ubuntu.sh` ) and test environment ( `Dockerfile` )
 
-I hope that you can refer to it when setting up **LinuxBrew** in Linux environment (Ubuntu).
-
-## Demo
-
-Non root use is name `brew` and password `brew` .
-
-The follow command launch docker environment.
-
-`brew` user will be logged in.
+I hope that you can refer to it when setting up **Homerew** in Linux environment (Ubuntu).
 
 ## Requirements
 
 * Docker
-* Docker Compose
 
 ## Usage
 
 **Launch**
 
 ```bash
-$ docker-compose run ubuntu
+# Build
+$ docker build -t genzouw/install_homebrew_on_ubuntu .
+
+# Run
+$ docker run -it genzouw/install_homebrew_on_ubuntu
 ```
 
-**Execute setup script**
-
-The `sudo` ask you `brew` user's password.
-It is `brew`.
+And you can use `brew`.
 
 ```bash
-$ /workdir/setup.sh
+# Install sl command
+$ brew install sl
+
+# Execute sl command
+$ ls
 ```
-
-
-## Relase Note
-
-| date       | version | note           |
-| ---        | ---     | ---            |
-| 2020-01-06 | 0.1     | first release. |
-
 
 ## License
 
