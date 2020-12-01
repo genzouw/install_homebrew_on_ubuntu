@@ -21,9 +21,11 @@ apt-get update \
 
 # Install
 mkdir -p "${BREW_HOME}"
-curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C "${BREW_HOME}"
+curl -L https://github.com/Homebrew/brew/tarball/master \
+  | tar xz \
+    --strip 1 -C "${BREW_HOME}"
 
 # Ready to use
 eval $("${BREW_HOME}/bin/brew" shellenv)
 
-echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bashrc
+echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>$HOME/.bashrc
