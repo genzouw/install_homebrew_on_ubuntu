@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:24.04
 
 LABEL maintainer "genzouw <genzouw@gmail.com>"
 
