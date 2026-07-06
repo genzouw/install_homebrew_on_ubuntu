@@ -26,6 +26,6 @@ curl -L https://github.com/Homebrew/brew/tarball/master \
     --strip 1 -C "${BREW_HOME}"
 
 # Ready to use
-eval $("${BREW_HOME}/bin/brew" shellenv)
+eval "$("${BREW_HOME}/bin/brew" shellenv)"
 
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>$HOME/.bashrc
